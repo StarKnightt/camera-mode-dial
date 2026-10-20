@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+  background: #121416;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #121416;
+}
+
+#view {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 42%, rgba(0, 0, 0, 0.58) 100%);
+}
+
+#mode {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 10vh;
+  margin: 0;
+  text-align: center;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: rgba(236, 236, 232, 0.9);
+  opacity: 1;
+  transition: opacity 160ms linear;
+}
+
+#mode.hide {
+  opacity: 0;
+}
+
+#hint {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 4.5vh;
+  margin: 0;
+  text-align: center;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(236, 236, 232, 0.38);
+}
+
+body.capture #mode,
+body.og #mode {
+  transition: none;
+}
+
+body.og #mode,
+body.og #hint,
+body.capture #hint {
+  display: none;
+}

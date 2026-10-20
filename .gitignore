@@ -1,0 +1,7 @@
+node_modules
+dist
+frames
+shots
+clicks.wav
+.DS_Store
+*.log
